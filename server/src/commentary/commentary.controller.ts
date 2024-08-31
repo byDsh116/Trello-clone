@@ -32,6 +32,5 @@ export class CommentaryController {
     remove(@Param('id') id: number): Promise<void> {
         return this.commentaryService.remove(id)
     }
-
 }
 
