@@ -30,37 +30,4 @@ export class Commentary extends Model<Commentary> {
 
     @BelongsTo(() => User)
     user: User
-
 }
-
-
-
-
-
-
-// @Table
-// export class Card extends Model<Card> {
-//     @Column({
-//         type: DataType.STRING,
-//         allowNull: false,
-//     })
-//     title: string
-
-//     @Column(DataType.TEXT)
-//     description: string;
-
-//     // что значит ForeignKey?
-//     @ForeignKey(() => TaskColumn)
-//     @Column({
-//         type: DataType.INTEGER,
-//         allowNull: false,
-//     })
-//     columnId: number;
-
-//     @BelongsTo(() => TaskColumn)
-//     column: TaskColumn
-
-//     @HasMany(() => Commentary)
-//     comments: Commentary[]
-
-// }
