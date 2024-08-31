@@ -1,6 +1,6 @@
 import { BelongsTo, Column, DataType, ForeignKey, HasMany, Model, Table } from "sequelize-typescript";
 import { TaskColumn } from "src/columns/column.model";
-import { Commentary } from "src/comments/commentary.model";
+import { Commentary } from "src/commentary/commentary.model";
 
 @Table
 export class Card extends Model<Card> {
