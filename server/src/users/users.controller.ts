@@ -12,9 +12,9 @@ export class UsersController {
         return this.usersService.create(createUserDto)
     }
 
-    @Get(':id')
-    findOne(@Param('id') id: number): Promise<void> {
-        return this.usersService.findByPk(id)
+    @Get(':email')
+    findOne(@Param('email') email: string): Promise<User> {
+        return this.usersService.findByEmail(email)
     }
 
     @Delete(':id')
