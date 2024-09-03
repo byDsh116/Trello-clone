@@ -17,13 +17,19 @@ export class UsersService {
         return user.save()
     }
 
-    async findByPk(id: number): Promise<void> {
-        const user = await this.userModel.findByPk(id);
-        await user.get()
+    async findByEmail(email: string): Promise<User> {
+        const user = await this.userModel.findOne({ where: { email } });
+        if (!user) {
+            throw new NotFoundException('User not found');
+        }
+        return user;
     }
 
     async remove(id: number): Promise<void> {
         const user = await this.userModel.findByPk(id);
+        if (!user) {
+            throw new NotFoundException('User not found');
+        }
         await user.destroy()
     }
 }
