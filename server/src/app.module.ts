@@ -6,9 +6,10 @@ import { TaskColumn } from './columns/column.model';
 import { Card } from './cards/card.model';
 import { UsersModule } from './users/users.module';
 import { TaskColumnModule } from './columns/columns.module';
-import { CardModule } from './cards/cards.module';
+import { CardModule } from './cards/card.module';
 import { Commentary } from './commentary/commentary.model';
 import { CommentaryModule } from './commentary/commentary.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -26,7 +27,7 @@ import { CommentaryModule } from './commentary/commentary.module';
       autoLoadModels: true,
       synchronize: true,
     }),
-    UsersModule, TaskColumnModule, CardModule, CommentaryModule
+    UsersModule, TaskColumnModule, CardModule, CommentaryModule, AuthModule
   ],
   controllers: [],
   providers: [],
